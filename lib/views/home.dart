@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
 
   Widget quizList() {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 24),
       child: StreamBuilder(
         stream: quizStream,
         builder: (context, snapshot) {
@@ -77,15 +78,46 @@ class QuizTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        margin: EdgeInsets.only(bottom: 8),
+        height: 150,
         child: Stack(
-      children: [
-        Image.network(imgUrl),
-        Container(
-            child: Column(children: [
-          Text(title),
-          Text(desc),
-        ]))
-      ],
-    ));
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.network(
+                imgUrl,
+                width: MediaQuery.of(context).size.width - 48,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.black26,
+                ),
+                alignment: Alignment.center,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        desc,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ]))
+          ],
+        ));
   }
 }
