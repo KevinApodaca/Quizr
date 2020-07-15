@@ -70,7 +70,7 @@ class _CreateQuizState extends State<CreateQuiz> {
                     validator: (val) =>
                         val.isEmpty ? "Please enter valid URL" : null,
                     decoration:
-                        InputDecoration(hintText: "Quiz Background Image"),
+                        InputDecoration(hintText: "Background Image Url"),
                     onChanged: (val) {
                       quizImageUrl = val;
                     },
