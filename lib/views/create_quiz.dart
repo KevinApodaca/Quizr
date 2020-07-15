@@ -63,10 +63,14 @@ class _CreateQuizState extends State<CreateQuiz> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 22),
                 child: Column(children: [
+                  Spacer(),
+                  TecheImage(),
+                  Spacer(),
                   TextFormField(
                     validator: (val) =>
                         val.isEmpty ? "Please enter valid URL" : null,
-                    decoration: InputDecoration(hintText: "Quiz Image Url"),
+                    decoration:
+                        InputDecoration(hintText: "Quiz Background Image"),
                     onChanged: (val) {
                       quizImageUrl = val;
                     },
@@ -98,7 +102,8 @@ class _CreateQuizState extends State<CreateQuiz> {
                       onTap: () {
                         createQuizOnline();
                       },
-                      child: blueButton(context: context, label: "New Quiz")),
+                      child:
+                          blueButton(context: context, label: "Create Quiz")),
                   SizedBox(
                     height: 60,
                   )

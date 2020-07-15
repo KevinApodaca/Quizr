@@ -105,7 +105,7 @@ class _SignInState extends State<SignIn> {
                                     builder: (context) => SignUp()));
                           },
                           child: Text(
-                            "Sign up here",
+                            "Sign up",
                             style: TextStyle(
                                 fontSize: 15.5,
                                 decoration: TextDecoration.underline),

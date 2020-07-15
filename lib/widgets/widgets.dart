@@ -32,3 +32,18 @@ Widget blueButton({BuildContext context, String label, buttonWidth}) {
     ),
   );
 }
+
+class TecheImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var assetsImage = new AssetImage('assets/img/teche.png');
+    var image = new Image(
+      image: assetsImage,
+      width: 100.0,
+      height: 100.0,
+    );
+    return new Container(
+      child: image,
+    );
+  }
+}
