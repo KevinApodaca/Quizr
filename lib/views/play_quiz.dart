@@ -85,6 +85,7 @@ class _PlayQuizState extends State<PlayQuiz> {
                     ),
                   )
                 : ListView.builder(
+                    padding: EdgeInsets.symmetric(horizontal: 24),
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
                     itemCount: questionSnapshot.documents.length,
@@ -117,10 +118,14 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(children: [
-        Text(widget.questionModel.question),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(
+          "Q${widget.index + 1}) ${widget.questionModel.question}",
+          style:
+              TextStyle(fontSize: 18, color: Colors.black87.withOpacity(0.8)),
+        ),
         SizedBox(
-          height: 4,
+          height: 12,
         ),
         GestureDetector(
           onTap: () {
@@ -144,7 +149,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
             }
           },
           child: OptionTile(
-            correctAnswer: widget.questionModel.option1,
+            correctAnswer: widget.questionModel.correctOption,
             description: widget.questionModel.option1,
             option: "A",
             optionSelected: optionSelected,
@@ -175,7 +180,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
             }
           },
           child: OptionTile(
-            correctAnswer: widget.questionModel.option1,
+            correctAnswer: widget.questionModel.correctOption,
             description: widget.questionModel.option2,
             option: "B",
             optionSelected: optionSelected,
@@ -206,7 +211,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
             }
           },
           child: OptionTile(
-            correctAnswer: widget.questionModel.option1,
+            correctAnswer: widget.questionModel.correctOption,
             description: widget.questionModel.option3,
             option: "C",
             optionSelected: optionSelected,
@@ -237,12 +242,15 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
             }
           },
           child: OptionTile(
-            correctAnswer: widget.questionModel.option1,
+            correctAnswer: widget.questionModel.correctOption,
             description: widget.questionModel.option4,
             option: "D",
             optionSelected: optionSelected,
           ),
         ),
+        SizedBox(
+          height: 20,
+        )
       ]),
     );
   }
