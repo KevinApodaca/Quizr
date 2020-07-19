@@ -46,7 +46,7 @@ class _PlayQuizState extends State<PlayQuiz> {
     questionModel.answered = false;
 
     print(questionModel.correctOption.toLowerCase());
-
+    
     return questionModel;
   }
 
@@ -119,6 +119,7 @@ class QuizPlayTile extends StatefulWidget {
   final QuestionModel questionModel;
   final int index;
   QuizPlayTile({this.questionModel, this.index});
+  
   @override
   QuizPlayTileState createState() => QuizPlayTileState();
 }
