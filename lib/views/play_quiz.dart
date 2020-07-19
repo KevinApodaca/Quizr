@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:quizmaker/models/question_model.dart';
 import 'package:quizmaker/services/database.dart';
+import 'package:quizmaker/views/results.dart';
 import 'package:quizmaker/widgets/quiz_play_widget.dart';
 import 'package:quizmaker/widgets/widgets.dart';
 
@@ -99,6 +100,19 @@ class _PlayQuizState extends State<PlayQuiz> {
                   )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.check),
+        onPressed: () {
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => Results(
+                        correct: _correct,
+                        incorrect: _incorrect,
+                        total: total,
+                      )));
+        },
       ),
     );
   }
