@@ -38,9 +38,10 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    databaseService.getQuizData().then((value) {
-      quizStream = value;
-      setState(() {});
+    databaseService.getQuizzesData().then((val) {
+      setState(() {
+        quizStream = val;
+      });
     });
     super.initState();
   }
