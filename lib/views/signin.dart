@@ -56,6 +56,8 @@ class _SignInState extends State<SignIn> {
                 child: Column(
                   children: [
                     Spacer(),
+                    TecheImage(),
+                    Spacer(),
                     TextFormField(
                       validator: (val) {
                         return val.isEmpty ? "Please check your email" : null;
@@ -94,7 +96,7 @@ class _SignInState extends State<SignIn> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Don't have an account yet?",
+                          "Don't have an account?",
                           style: TextStyle(fontSize: 15.5),
                         ),
                         GestureDetector(

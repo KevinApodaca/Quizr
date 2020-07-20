@@ -56,6 +56,8 @@ class _SignUpState extends State<SignUp> {
                 child: Column(
                   children: [
                     Spacer(),
+                    TecheImage(),
+                    Spacer(),
                     TextFormField(
                       validator: (val) {
                         return val.isEmpty ? "Enter your name" : null;
