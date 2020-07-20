@@ -63,7 +63,6 @@ class _CreateQuizState extends State<CreateQuiz> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 22),
                 child: Column(children: [
-                  Spacer(),
                   TextFormField(
                     validator: (val) =>
                         val.isEmpty ? "Please enter valid URL" : null,

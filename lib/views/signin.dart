@@ -96,7 +96,7 @@ class _SignInState extends State<SignIn> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Don't have an account?",
+                          "Don't have an account? ",
                           style: TextStyle(fontSize: 15.5),
                         ),
                         GestureDetector(

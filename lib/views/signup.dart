@@ -105,7 +105,7 @@ class _SignUpState extends State<SignUp> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account?",
+                          "Already have an account? ",
                           style: TextStyle(fontSize: 15.5),
                         ),
                         GestureDetector(
