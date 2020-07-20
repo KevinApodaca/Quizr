@@ -13,7 +13,7 @@
   <a href="#credits">Credits</a> •
 </p>
 
-![TODO: add demo gif]()
+![Screenshot](Show.png)
 
 ## Key Features
 
